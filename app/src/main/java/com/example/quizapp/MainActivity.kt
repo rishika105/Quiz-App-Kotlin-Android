@@ -9,6 +9,7 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        //this is the main activity kotlin file
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
