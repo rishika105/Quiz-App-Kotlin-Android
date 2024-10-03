@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    android:padding="20dp"
+    tools:context=".QuizTypeActivity">
+
+    <!-- Heading for Quiz Types -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Types of Quiz"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:paddingBottom="20dp"
+        />
+
+    <!-- Sub-heading -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a quiz type"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:paddingBottom="10dp"
+        />
+
+    <!-- Flags Button -->
+    <Button
+        android:id="@+id/btnFlags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flags"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- General Knowledge Button -->
+    <Button
+        android:id="@+id/btnGeneralKnowledge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General Knowledge"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Verbal Button -->
+    <Button
+        android:id="@+id/btnVerbal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verbal"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <!-- Reasoning Button -->
+    <Button
+        android:id="@+id/btnReasoning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reasoning"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:elevation="4dp"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+        />
+</LinearLayout>
