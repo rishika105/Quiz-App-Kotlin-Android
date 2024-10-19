@@ -24,7 +24,7 @@ class QuizTypeActivity : AppCompatActivity() {
             intent.putExtra(Constants.USER_NAME, userName)
             intent.putExtra(Constants.QUIZ_TYPE, Constants.QuizType.FLAGS.toString())
             startActivity(intent)
-            finish()
+            finish() // This will close the QuizTypeActivity
         }
 
         btnGeneralKnowledge.setOnClickListener {
