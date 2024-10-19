@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -22,9 +22,9 @@ class SignupActivity : AppCompatActivity() {
         databaseHelper = DatabaseHelper(this)
 
         binding.signupButton.setOnClickListener {
-            val email = binding.signupEmail.text.toString()
-            val password = binding.signupPassword.text.toString()
-            val confirmPassword = binding.signupConfirm.text.toString()
+            val email = binding.signupEmail.text.toString().trim()
+            val password = binding.signupPassword.text.toString().trim()
+            val confirmPassword = binding.signupConfirm.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
                 Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show()
@@ -37,7 +37,9 @@ class SignupActivity : AppCompatActivity() {
                             withContext(Dispatchers.Main) {
                                 if (insert) {
                                     Toast.makeText(this@SignupActivity, "Signup Successfully!", Toast.LENGTH_SHORT).show()
-                                    startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
+                                    val intent = Intent(this@SignupActivity, LoginActivity::class.java)
+                                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                    startActivity(intent)
                                     finish()
                                 } else {
                                     Toast.makeText(this@SignupActivity, "Signup Failed!", Toast.LENGTH_SHORT).show()
@@ -45,7 +47,7 @@ class SignupActivity : AppCompatActivity() {
                             }
                         } else {
                             withContext(Dispatchers.Main) {
-                                Toast.makeText(this@SignupActivity, "User  already exists! Please login", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@SignupActivity, "User already exists! Please login", Toast.LENGTH_SHORT).show()
                             }
                         }
                     }
