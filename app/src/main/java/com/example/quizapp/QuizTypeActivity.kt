@@ -13,6 +13,7 @@ class QuizTypeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_quiz_type)
 
         val userName = intent.getStringExtra(Constants.USER_NAME)
+        val userEmail = intent.getStringExtra(Constants.USER_EMAIL)
 
         val btnFlags = findViewById<Button>(R.id.btnFlags)
         val btnGeneralKnowledge = findViewById<Button>(R.id.btnGeneralKnowledge)
@@ -22,7 +23,8 @@ class QuizTypeActivity : AppCompatActivity() {
         btnFlags.setOnClickListener {
             val intent = Intent(this, QuizQuestionsActivity::class.java)
             intent.putExtra(Constants.USER_NAME, userName)
-            intent.putExtra(Constants.QUIZ_TYPE, Constants.QuizType.FLAGS.toString())
+            intent.putExtra(Constants.USER_EMAIL, userEmail)
+            intent.putExtra(Constants.QUIZ_TYPE, Constants.QuizType.FLAGS.toString()) // Or other quiz type
             startActivity(intent)
             finish() // This will close the QuizTypeActivity
         }

@@ -33,9 +33,10 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Login Successfully!", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "Login successful, starting MainActivity")
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra(Constants.USER_EMAIL, email)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
-                    finish() // This will close the LoginActivity
+                    finish()
                 } else {
                     Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show()
                     Log.d(TAG, "Login failed: Invalid credentials")
@@ -49,3 +50,5 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
+
+

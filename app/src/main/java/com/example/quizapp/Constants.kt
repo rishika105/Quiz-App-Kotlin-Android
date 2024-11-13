@@ -7,7 +7,7 @@ object Constants {
     const val TOTAL_QUESTIONS: String = "total_questions"
     const val SCORE: String = "score"
     const val QUIZ_TYPE: String = "quiz_type"
-
+    const val USER_EMAIL: String = "user_email"
     enum class QuizType {
         FLAGS, GENERAL_KNOWLEDGE, VERBAL, REASONING
     }

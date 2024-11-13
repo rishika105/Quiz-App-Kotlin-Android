@@ -165,24 +165,28 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     this@QuizQuestionsActivity,
                     drawableView
                 )
+                tvOptionOne?.setTextColor(Color.WHITE) // Set text color to white for better visibility
             }
             2 -> {
                 tvOptionTwo?.background = ContextCompat.getDrawable(
                     this@QuizQuestionsActivity,
                     drawableView
                 )
+                tvOptionTwo?.setTextColor(Color.WHITE)
             }
             3 -> {
                 tvOptionThree?.background = ContextCompat.getDrawable(
                     this@QuizQuestionsActivity,
                     drawableView
                 )
+                tvOptionThree?.setTextColor(Color.WHITE)
             }
             4 -> {
                 tvOptionFour?.background = ContextCompat.getDrawable(
                     this@QuizQuestionsActivity,
                     drawableView
                 )
+                tvOptionFour?.setTextColor(Color.WHITE)
             }
         }
     }

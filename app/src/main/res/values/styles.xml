@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Optional: Customize other Material Design attributes -->
+        <item name="android:buttonStyle">@style/Widget.MaterialComponents.Button</item>
+        <item name="android:editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox</item>
+        <item name="android:textViewStyle">@style/Widget.MaterialComponents.TextView</item>
+
+        <!-- Customize the default background for your app -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Toggle Button Style -->
     <style name="toggleButton">
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
@@ -10,5 +30,11 @@
         <item name="android:textColor">#333333</item>
         <item name="android:textSize">20sp</item>
         <item name="android:background">@drawable/default_option_border_bg</item>
+
+        <!-- Material Design attributes -->
+        <item name="android:state_pressed">true</item> <!-- Optional: Change background on press -->
+        <item name="android:backgroundTint">?attr/colorPrimary</item> <!-- Use theme attributes for tinting -->
+        <!-- Consider removing cornerRadius if not using a compatible component -->
     </style>
+
 </resources>
